@@ -44,12 +44,13 @@ const SearchBar = () => {
     } else {
       searchParams.delete("model");
     }
-
+    
     // Update or delete the 'manufacturer' search parameter based on the 'manufacturer' value
     if (manufacturer) {
       searchParams.set("manufacturer", manufacturer);
+      // searchParams.delete("model");
     } else {
-       searchParams.delete("manufacturer");
+      searchParams.delete("manufacturer");
     }
 
     // Generate the new pathname with the updated search parameters
